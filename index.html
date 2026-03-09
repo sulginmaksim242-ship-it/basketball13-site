@@ -36,7 +36,6 @@ color:white;
 text-decoration:none;
 font-size:18px;
 font-weight:bold;
-transition:0.3s;
 }
 
 nav a:hover{
@@ -46,38 +45,30 @@ color:orange;
 /* баннер */
 
 .hero{
-height:420px;
-background:
-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url("class.jpg") center/cover;
+height:320px;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+background:linear-gradient(135deg,#ff7a00,#ffb347);
+color:black;
 }
 
 .hero h1{
-font-size:48px;
+font-size:44px;
 margin-bottom:10px;
 }
 
-.hero p{
-font-size:20px;
-color:#ddd;
-}
-
-/* контейнер */
-
 .container{
-max-width:1100px;
+max-width:1000px;
 margin:auto;
 padding:40px 20px;
 }
 
-/* правила */
+/* карточки */
 
-.rules{
+.cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
@@ -93,7 +84,7 @@ transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-6px);
 border-color:orange;
 }
 
@@ -102,38 +93,14 @@ color:orange;
 margin-bottom:10px;
 }
 
-/* галерея */
+/* текстовый блок */
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
+.textblock{
+background:#1e293b;
+padding:25px;
+border-radius:12px;
 margin-top:30px;
-}
-
-.gallery img{
-width:100%;
-border-radius:10px;
-transition:0.3s;
-}
-
-.gallery img:hover{
-transform:scale(1.05);
-}
-
-/* мяч */
-
-.ball{
-position:fixed;
-bottom:25px;
-right:25px;
-font-size:42px;
-animation:bounce 1s infinite alternate;
-}
-
-@keyframes bounce{
-from{transform:translateY(0)}
-to{transform:translateY(-18px)}
+border:1px solid #334155;
 }
 
 /* подвал */
@@ -155,58 +122,96 @@ border-top:2px solid orange;
 <nav>
 <a href="#">Главная</a>
 <a href="#rules">Правила</a>
-<a href="#photos">Фото</a>
+<a href="#refs">Судьи</a>
 </nav>
 
 <section class="hero">
 <h1>Правила баскетбола</h1>
-<p>Коротко и понятно</p>
+<p>Основные правила игры</p>
 </section>
 
 <div class="container">
 
 <h2 id="rules">Основные правила</h2>
 
-<div class="rules">
+<div class="cards">
 
 <div class="card">
 <h3>Цель игры</h3>
-<p>Нужно забросить мяч в корзину соперника и набрать больше очков.</p>
+<p>Главная задача команды — забросить мяч в корзину соперника и набрать больше очков, чем другая команда.</p>
 </div>
 
 <div class="card">
 <h3>Игроки</h3>
-<p>На площадке играют две команды по 5 игроков.</p>
+<p>В каждой команде на площадке находится по 5 игроков. Остальные игроки находятся на скамейке и могут выходить на замену.</p>
+</div>
+
+<div class="card">
+<h3>Начало игры</h3>
+<p>Игра начинается со спорного броска в центре площадки. Судья подбрасывает мяч вверх, и игроки пытаются отбить его своей команде.</p>
 </div>
 
 <div class="card">
 <h3>Очки</h3>
-<p>Бросок — 2 очка, из-за трёхочковой линии — 3 очка, штрафной — 1 очко.</p>
+<p>За обычный бросок команда получает 2 очка. Бросок из-за трёхочковой линии приносит 3 очка. Штрафной бросок даёт 1 очко.</p>
 </div>
 
 <div class="card">
-<h3>Ведение</h3>
-<p>Игрок обязан вести мяч, ударяя его об пол.</p>
+<h3>Ведение мяча</h3>
+<p>Игрок должен вести мяч, ударяя его об пол. Если игрок бежит с мячом без ведения — это нарушение.</p>
+</div>
+
+<div class="card">
+<h3>Нарушения</h3>
+<p>К нарушениям относятся: пробежка, двойное ведение, выход мяча за пределы площадки и нарушение времени атаки.</p>
 </div>
 
 <div class="card">
 <h3>Фолы</h3>
-<p>Толкать или держать соперника запрещено.</p>
+<p>Фол — это нарушение правил против игрока соперника, например толчок или удар по рукам. За фол могут назначаться штрафные броски.</p>
+</div>
+
+<div class="card">
+<h3>Время игры</h3>
+<p>Матч состоит из четырёх четвертей. Побеждает команда, которая набрала больше очков к концу игры.</p>
 </div>
 
 </div>
 
-<h2 id="photos" style="margin-top:50px">Фотографии</h2>
+<h2 id="refs" style="margin-top:40px">Роль судей в баскетболе</h2>
 
-<div class="gallery">
-<img src="class.jpg">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Basketball_net.jpg">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Basketball_game.jpg">
+<div class="textblock">
+<p>
+Судьи играют очень важную роль в баскетболе. Их задача — следить за соблюдением правил игры и обеспечивать честную игру.
+</p>
+
+<br>
+
+<p>
+Судьи следят за нарушениями, фиксируют фолы и принимают решения во время спорных моментов. Они также начинают игру, подбрасывая мяч в начале матча.
+</p>
+
+<br>
+
+<p>
+Во время игры судьи контролируют время, выход мяча за пределы площадки и правильность выполнения бросков и передач.
+</p>
+
+<br>
+
+<p>
+Обычно матч обслуживают несколько судей. Это помогает лучше контролировать всю площадку и быстрее замечать нарушения.
+</p>
+
+<br>
+
+<p>
+Благодаря судьям игра проходит честно и по правилам.
+</p>
+
 </div>
 
 </div>
-
-<div class="ball">🏀</div>
 
 <footer>
 Сайт сделан Максимом Шульгиным
