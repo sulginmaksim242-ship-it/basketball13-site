@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Правила баскетбола</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family: Arial, sans-serif;
+background:#eef1f5;
+color:#222;
+}
+
+/* меню */
+
+nav{
+background:#111;
+color:white;
+display:flex;
+justify-content:center;
+gap:40px;
+padding:15px;
+position:sticky;
+top:0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+}
+
+nav a:hover{
+color:#ff7a00;
+}
+
+/* главный экран */
+
+.hero{
+height:320px;
+background:url("https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png") center/contain no-repeat,#ff7a00;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+text-align:center;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+/* контейнер */
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:30px;
+}
+
+/* карточки правил */
+
+.rules{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:transform 0.2s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+margin-bottom:10px;
+color:#ff7a00;
+}
+
+/* галерея */
+
+.gallery{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
+/* подвал */
+
+footer{
+margin-top:40px;
+background:#111;
+color:white;
+text-align:center;
+padding:25px;
+font-size:18px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#">Главная</a>
+<a href="#rules">Правила</a>
+<a href="#photos">Фото</a>
+</nav>
+
+<section class="hero">
+<h1>Правила баскетбола</h1>
+<p>Коротко и понятно</p>
+</section>
+
+<div class="container">
+
+<h2 id="rules">Основные правила</h2>
+
+<div class="rules">
+
+<div class="card">
+<h3>Цель игры</h3>
+<p>Нужно забросить мяч в корзину соперника и набрать больше очков.</p>
+</div>
+
+<div class="card">
+<h3>Игроки</h3>
+<p>На площадке играют две команды по 5 игроков.</p>
+</div>
+
+<div class="card">
+<h3>Очки</h3>
+<p>Обычный бросок — 2 очка, из-за дуги — 3 очка, штрафной — 1 очко.</p>
+</div>
+
+<div class="card">
+<h3>Ведение</h3>
+<p>Игрок должен вести мяч, ударяя его об пол. Нельзя бежать без ведения.</p>
+</div>
+
+<div class="card">
+<h3>Фолы</h3>
+<p>Толкать, бить или держать соперника нельзя. За это дают штрафные броски.</p>
+</div>
+
+</div>
+
+<h2 id="photos" style="margin-top:40px">Баскетбол</h2>
+
+<div class="gallery">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Basketball_net.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Basketball_game.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png">
+
+</div>
+
+</div>
+
+<footer>
+Сайт сделан Максимом Шульгиным
+</footer>
+
+</body>
+</html>
