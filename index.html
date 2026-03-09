@@ -14,113 +14,137 @@ box-sizing:border-box;
 }
 
 body{
-font-family: Arial, sans-serif;
-background:#eef1f5;
-color:#222;
+font-family:Arial, sans-serif;
+background:#0f172a;
+color:white;
+line-height:1.6;
 }
 
 /* меню */
 
 nav{
-background:#111;
-color:white;
+background:#020617;
 display:flex;
 justify-content:center;
 gap:40px;
-padding:15px;
-position:sticky;
-top:0;
+padding:18px;
+border-bottom:2px solid orange;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-font-weight:bold;
 font-size:18px;
+font-weight:bold;
+transition:0.3s;
 }
 
 nav a:hover{
-color:#ff7a00;
+color:orange;
 }
 
-/* главный экран */
+/* баннер */
 
 .hero{
-height:320px;
-background:url("https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png") center/contain no-repeat,#ff7a00;
+height:420px;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("class.jpg") center/cover;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-color:white;
 text-align:center;
 }
 
 .hero h1{
-font-size:40px;
+font-size:48px;
 margin-bottom:10px;
 }
 
 .hero p{
-font-size:18px;
+font-size:20px;
+color:#ddd;
 }
 
 /* контейнер */
 
 .container{
-max-width:1000px;
+max-width:1100px;
 margin:auto;
-padding:30px;
+padding:40px 20px;
 }
 
-/* карточки правил */
+/* правила */
 
 .rules{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:25px;
+margin-top:30px;
 }
 
 .card{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-transition:transform 0.2s;
+background:#1e293b;
+padding:25px;
+border-radius:12px;
+border:1px solid #334155;
+transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-8px);
+border-color:orange;
 }
 
 .card h3{
+color:orange;
 margin-bottom:10px;
-color:#ff7a00;
 }
 
 /* галерея */
 
 .gallery{
-margin-top:40px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:15px;
+margin-top:30px;
 }
 
 .gallery img{
 width:100%;
 border-radius:10px;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* мяч */
+
+.ball{
+position:fixed;
+bottom:25px;
+right:25px;
+font-size:42px;
+animation:bounce 1s infinite alternate;
+}
+
+@keyframes bounce{
+from{transform:translateY(0)}
+to{transform:translateY(-18px)}
 }
 
 /* подвал */
 
 footer{
 margin-top:40px;
-background:#111;
-color:white;
+background:#020617;
 text-align:center;
 padding:25px;
 font-size:18px;
+border-top:2px solid orange;
 }
 
 </style>
@@ -157,32 +181,32 @@ font-size:18px;
 
 <div class="card">
 <h3>Очки</h3>
-<p>Обычный бросок — 2 очка, из-за дуги — 3 очка, штрафной — 1 очко.</p>
+<p>Бросок — 2 очка, из-за трёхочковой линии — 3 очка, штрафной — 1 очко.</p>
 </div>
 
 <div class="card">
 <h3>Ведение</h3>
-<p>Игрок должен вести мяч, ударяя его об пол. Нельзя бежать без ведения.</p>
+<p>Игрок обязан вести мяч, ударяя его об пол.</p>
 </div>
 
 <div class="card">
 <h3>Фолы</h3>
-<p>Толкать, бить или держать соперника нельзя. За это дают штрафные броски.</p>
+<p>Толкать или держать соперника запрещено.</p>
 </div>
 
 </div>
 
-<h2 id="photos" style="margin-top:40px">Баскетбол</h2>
+<h2 id="photos" style="margin-top:50px">Фотографии</h2>
 
 <div class="gallery">
-
+<img src="class.jpg">
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Basketball_net.jpg">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Basketball_game.jpg">
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png">
-
 </div>
 
 </div>
+
+<div class="ball">🏀</div>
 
 <footer>
 Сайт сделан Максимом Шульгиным
